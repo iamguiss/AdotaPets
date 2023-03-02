@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#6F8596"
     tools:context=".SplashActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:contentDescription="Leão"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:src="@drawable/coruja"/>
+
+    <TextView
+        android:shadowColor="#000"
+        android:shadowRadius="58"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textColor="#E9DD7C"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adota Pets"
+
+</LinearLayout>
