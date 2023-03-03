@@ -1,40 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivity">
+
+
+        <ImageView
+
+            android:id="@+id/imgcoruja"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/coruja"
+
+
+
+        <EditText
+            android:id="@+id/edtUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgcoruja"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:drawableEnd="@drawable/ic_baseline_fingerprint"
+            android:hint="insira o nome de usuário"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/edtSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtUsuario"
+            android:layout_marginTop="20dp"
+            android:drawableEnd="@drawable/ic_baseline_lock"
+            android:hint="insira a senha do usuário"
+            android:padding="15dp"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:layout_below="@+id/edtSenha"
+    android:orientation="horizontal">
+        <Button
+            android:layout_marginRight="5dp"
+            android:layout_weight="01"
+            android:id="@+id/btnEntra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtSenha"
+            android:text="Entrar"
 
-
-    <ImageView
-        android:id="@+id/imgcoruja"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/coruja"
-
-    <EditText
-        android:id="@+id/edtUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="insira o nome de usuário"
-
-    <EditText
-        android:id="@+id/edtSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="insira a senha do usuário"
-
-    <Button
-        android:id="@+id/btnEntra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Entrar"
-
-    <Button
-        android:id="@+id/btnSair"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sair"
-
-</RelativeLayout>
+        <Button
+            android:layout_marginLeft="5dp"
+            android:layout_weight="01"
+            android:id="@+id/btnSair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtSenha"
+            android:layout_toRightOf="@+id/btnEntra"
+            android:text="sair"
+</LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
